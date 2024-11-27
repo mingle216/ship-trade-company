@@ -1,0 +1,44 @@
+{
+  "name": "ship-trade-company",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 8082",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@eslint/config-array": "^0.18.0",
+    "@eslint/object-schema": "^2.1.4",
+    "captcha.js": "^1.0.5",
+    "framer-motion": "^11.11.8",
+    "glob": "^11.0.0",
+    "inflight": "^1.0.6",
+    "lru-cache": "^11.0.1",
+    "lucide-react": "^0.452.0",
+    "next": "^14.2.15",
+    "next-i18next": "^15.3.1",
+    "nodemailer": "^6.9.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-feather": "^2.0.10",
+    "react-google-recaptcha": "^3.1.0",
+    "react-i18next": "^15.0.2",
+    "react-responsive-carousel": "^3.2.23",
+    "rimraf": "^6.0.1",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "14.2.15",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5"
+  }
+}
