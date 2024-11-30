@@ -113,7 +113,7 @@ export default function Products() {
                 viewport={{ once: true }}
                 className="bg-white rounded-lg shadow-md overflow-hidden"
               >
-                <Image src={product.image} alt={product.name} width={300} height={200} className="w-full object-cover" style={{ height: "300px" }} />
+                <Image src={product.image} alt={product.name} width={300} height={200} loading="lazy" className="w-full object-cover" style={{ height: "300px" }} />
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}

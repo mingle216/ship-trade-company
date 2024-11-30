@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
+import { lazy } from 'react';
 
 export default function About() {
   return (
@@ -40,6 +41,7 @@ export default function About() {
                 width={500}
                 height={300}
                 className="rounded-lg shadow-lg object-cover"
+                loading="lazy" 
               />
             </motion.div>
             <motion.div

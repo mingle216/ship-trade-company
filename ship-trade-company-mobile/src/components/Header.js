@@ -39,10 +39,11 @@ export default function Header() {
           ml={4}
         >
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-bL2kG06PpnZbb7lGvXWv8BDoQfFu86.png"
+            src="/images/logo.webp"
             alt="南通睦融电气设备有限公司 Logo"
             width={useBreakpointValue({ base: 80, md: 100 })}
             height={useBreakpointValue({ base: 28, md: 35 })}
+            loading='lazy'
           />
           <Text
             fontSize={{ base: 'xl', md: 'xl' }}

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { lazy } from 'react';
 
 export default function Header() {
   return (
@@ -17,7 +18,7 @@ export default function Header() {
           transition={{ duration: 0.5 }}
           className="flex items-center space-x-2"
         >
-          <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-bL2kG06PpnZbb7lGvXWv8BDoQfFu86.png" alt="南通睦融电气设备有限公司 Logo"  width={100} height={35} />
+          <Image src="/images/logo.webp"  width={100} height={35} loading="lazy"  />
           <h1 className="text-2xl font-bold main-color" style={{ marginLeft: '20px'}}>南通睦融电气设备</h1>
         </motion.div>
         <nav>

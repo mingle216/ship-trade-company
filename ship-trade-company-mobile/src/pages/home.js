@@ -22,6 +22,13 @@ export default function Home() {
     config: { duration: 800 },
   });
 
+  // 移动端动画
+  const mobileFadeInUp = useSpring({
+    from: { opacity: 0, transform: 'translateY(50px)' },
+    to: { opacity: 1, transform: 'translateY(0px)' },
+    config: { duration: 1000 },
+  });
+
   return (
     <Box className="flex flex-col min-h-screen">
       <Header />
@@ -58,6 +65,7 @@ export default function Home() {
                 objectFit="cover"
                 width="100%"
                 height="100%"
+                loading='lazy'
               />
               <Flex
                 direction="column"
@@ -174,9 +182,55 @@ export default function Home() {
           </Box>
         </animated.div>
 
-        <animated.div style={fadeInUp}>
-          <Box as="section" id="products" bg="gray.100" mb={6}>
+        {/* 移动端岸电改造项目部分 */}
+        <Box as="section" id="shore-power" py={10}>
+          <animated.div style={mobileFadeInUp}>
             <Box className="container mx-auto px-4">
+              <Text
+                as="h2"
+                fontSize={{ base: "2xl", md: "3xl" }}
+                fontWeight="bold"
+                color="main.50"
+                textAlign="center"
+                py={5}
+              >
+                船舶岸电改造项目
+              </Text>
+
+              <Flex direction={{ base: "column", md: "row" }} align="center" justify="space-between" wrap="wrap">
+                
+                <animated.div style={mobileFadeInUp} className="mb-8 md:mb-0 md:w-1/2">
+                  <Image
+                    src="/images/andian.webp"
+                    alt="岸电改造"
+                    width="100%"
+                    height={{ base: "auto", md: "300px" }}
+                    className="rounded-lg shadow-lg object-cover"
+                    loading='lazy'
+                  />
+                </animated.div>
+
+                <animated.div  className="" style={mobileFadeInUp}>
+                  <Text className="text-lg mb-2">
+                    我们具备丰富的技术经验，可为各种类型的船舶提供量身定制的岸电解决方案。主要分为低压和高压两种方案，适用于不同类型和规模的船舶。
+                  </Text>
+                  <Text className="text-lg mb-2">低压岸电改造主要适用于适用于中小型港口设施。低压系统操作简单，成本较低，能够满足基本的停泊电力需求，灵活性高。</Text>
+                  <Text className="text-lg mb-2">对于大型船舶，如集装箱船、油轮、货轮，我们提供高压岸电改造服务，满足高功率需求。高压系统采用先进的配电控制技术，确保电力高效传输和使用，同时具备完善的安全保护措施，保障电力连接安全。</Text>
+                  <Text className="text-lg mb-2">
+                    我们提供全程技术支持，包括系统设计、安装、调试和维护，确保岸电系统的稳定运行，并与港口管理部门合作，确保安装符合国际标准，满足船东和运营方的需求。通过提供清洁高效的岸电解决方案，我们推动航运业可持续发展，为碳中和目标作出贡献。
+                  </Text>
+                  <Text className="text-lg mb-2">
+                    实施岸电改造后，客户可显著降低燃油成本，减少设备的磨损与维护费用，同时符合国际海事组织（IMO）的环保法规。我们的目标是为每艘停泊的船舶提供环保、经济、安全的电力支持，助力港口和航运业向绿色智能化方向发展。
+                  </Text>
+                </animated.div>
+              </Flex>
+            </Box>
+          </animated.div>
+        </Box>
+
+        <animated.div style={fadeInUp}>
+          <Box as="section" id="products" bg="white" mb={6} >
+            <Box className="container mx-auto px-4 py-8">
               <Text
                 as="h2"
                 fontSize={{ base: "2xl", md: "4xl" }}
@@ -213,7 +267,7 @@ export default function Home() {
                       overflow="hidden"
                       _hover={{ boxShadow: "xl" }}
                     >
-                      <Image src={product.image} alt={product.name} width={400} height={300} objectFit="cover" />
+                      <Image src={product.image} alt={product.name} width={400} height={300} loading='lazy' objectFit="cover" />
                       <Box p={6}>
                         <Text fontSize="xl" fontWeight="bold" mb={2}>{product.name}</Text>
                         <Text fontSize="md" color="gray.600" mb={2}>类型：{product.type}</Text>

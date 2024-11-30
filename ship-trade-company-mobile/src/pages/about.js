@@ -62,6 +62,7 @@ export default function About() {
                   width={500}
                   height={300}
                   className="rounded-lg shadow-lg object-cover mb-4"
+                  loading='lazy'
                 />
               </animated.div>
               <animated.div style={fadeInRight} className="w-full md:w-1/2">

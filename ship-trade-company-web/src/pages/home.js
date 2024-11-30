@@ -59,6 +59,7 @@ export default function Home() {
               layout="fill"
               objectFit="cover"
               quality={100}
+              loading="lazy"
             />
           </div>
           <div style={{ position: 'relative', height: '600px' }}>
@@ -68,6 +69,7 @@ export default function Home() {
               layout="fill"
               objectFit="cover"
               quality={100}
+              loading="lazy"
             />
           </div>
           <div style={{ position: 'relative', height: '600px' }}>
@@ -77,6 +79,7 @@ export default function Home() {
               layout="fill"
               objectFit="fill"
               quality={100}
+              loading="lazy"
             />
           </div>
         </Carousel>
@@ -90,7 +93,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="text-4xl font-bold mb-8 text-center main-color"
+              className="text-3xl font-bold mb-8 text-center main-color"
             >
               我们的服务
             </motion.h2>
@@ -130,7 +133,9 @@ export default function Home() {
             viewport={{ once: true }}
             className="container mx-auto px-4"
           >
+            <h2 className="text-3xl font-bold  main-color flex justify-center py-10">船舶岸电改造项目</h2>
             <div className="flex flex-col md:flex-row items-start justify-between">
+            
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -138,12 +143,14 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="mb-8 md:mb-0 md:w-1/2"
               >
+                
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DALL%C2%B7E-2024-10-03-21.54%20(1)-mMFTmJXQiryb8BfD3zmFdBpU0pDCjG.png"
+                  src="/images/andian.webp"
                   alt="岸电改造"
-                  width={500}
+                  width={800}
                   height={300}
                   className="rounded-lg shadow-lg object-cover"
+                  loading="lazy"
                 />
               </motion.div>
               <motion.div
@@ -154,7 +161,7 @@ export default function Home() {
                 className="md:pl-8 md:w-1/2"
                 style={{ height: '500px', overflowY: 'auto'}}
               >
-                <h2 className="text-3xl font-bold mb-4 main-color">船舶岸电改造项目</h2>
+                
                 <p className="text-lg mb-1">
                   我们具备丰富的技术经验，可为各种类型的船舶提供量身定制的岸电解决方案。主要分为低压和高压两种方案，适用于不同类型和规模的船舶。
                 </p>
@@ -201,7 +208,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="bg-white rounded-lg shadow-md overflow-hidden"
               >
-                <Image src={product.image} alt={product.name} width={280} height={200} className="w-full object-cover" style={{height: "300px"}} />
+                <Image src={product.image} alt={product.name} width={280} height={200} className="w-full object-cover" loading="lazy" style={{height: "300px"}} />
                 <div className="p-4">
                   <h3 className="text-xl font-bold mb-2">{product.name}</h3>
                   <p className="text-gray-600 mb-2">类型：{product.type}</p>

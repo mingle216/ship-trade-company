@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 8082",
+    "start": "next start -p 3000",
     "lint": "next lint"
   },
   "dependencies": {
@@ -19,6 +19,7 @@
     "lucide-react": "^0.452.0",
     "next": "^14.2.15",
     "next-i18next": "^15.3.1",
+    "next-optimized-images": "^2.6.2",
     "nodemailer": "^6.9.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -30,15 +31,20 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^15.0.3",
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.0.0",
     "eslint-config-next": "14.2.15",
+    "image-webpack-loader": "^8.1.0",
+    "imagemin": "^6.1.0",
+    "imagemin-webp-webpack-plugin": "^3.3.6",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.13",
-    "typescript": "^5"
+    "typescript": "^5",
+    "webpack": "^4.47.0"
   }
 }

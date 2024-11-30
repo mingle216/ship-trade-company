@@ -126,6 +126,7 @@ export default function Products() {
                     height={400}
                     className="w-full object-cover"
                     style={{ height: "300px" }}
+                    loading='lazy'
                   />
                   <Box p={4}>
                     <Text fontSize="lg" fontWeight="bold" mb={2}>
