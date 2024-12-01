@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { animated, useSpring, useTrail } from 'react-spring';
+import Head from 'next/head';
 
 export default function Home() {
   // 恢复并定义动画效果
@@ -31,6 +32,18 @@ export default function Home() {
 
   return (
     <Box className="flex flex-col min-h-screen">
+    <Head>
+      <title>南通睦融电气有限公司</title>
+      <meta name="description" content="南通睦融电气有限公司" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/images/favicon.ico" />
+
+      <link rel="icon" href="/images/favicon-16.png" sizes="16x16" />
+      <link rel="icon" href="/images/favicon-32.png" sizes="32x32" />
+      
+      <link rel="apple-touch-icon" href="/images/apple-icon.png" />
+    </Head>
+
       <Header />
 
       <Box position="relative" top="0px">

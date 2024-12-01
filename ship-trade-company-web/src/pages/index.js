@@ -6,10 +6,16 @@ import Footer from '../components/Footer';
 import { Carousel } from 'react-responsive-carousel';
 import { motion } from 'framer-motion';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Head from 'next/head';
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+    <Head>
+      <title>南通睦融电气有限公司</title>
+      <meta name="description" content="南通睦融电气有限公司" />
+      <link rel="icon" href="/images/favicon.ico" />
+    </Head>
       <Header />
 
       <div className="relative" style={{ top: '0px' }}>

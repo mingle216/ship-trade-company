@@ -68,7 +68,7 @@ export default function Header() {
             display={{ base: 'none', md: 'flex' }}
           >
             {['首页', '业务', '关于我们', '联系我们'].map((title, index) => {
-              const hrefs = ['/home', '/products', '/about', '/ContactUs'];
+              const hrefs = ['/', '/products', '/about', '/ContactUs'];
               return (
                 <Box
                   key={index}
@@ -124,7 +124,7 @@ export default function Header() {
           <DrawerBody>
             <Flex direction="column" align="start">
               {['首页', '业务', '关于我们', '联系我们'].map((title, index) => {
-                const hrefs = ['/home', '/products', '/about', '/ContactUs'];
+                const hrefs = ['/', '/products', '/about', '/ContactUs'];
                 return (
                   <Link href={hrefs[index]} passHref key={index}>
                     <Text

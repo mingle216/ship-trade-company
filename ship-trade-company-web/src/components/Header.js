@@ -29,7 +29,7 @@ export default function Header() {
             className="flex space-x-16"
           >
             <motion.li whileHover={{ scale: 1.1 }} className="relative group">
-              <Link href="/home" legacyBehavior>
+              <Link href="/" legacyBehavior>
                 <a className="hover:text-blue-600 transition duration-300 main-color font-medium" >首页</a>
               </Link>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
